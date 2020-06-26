@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN",
+    "lint": "eslint \"./**/*.{ts,tsx,js,jsx}\"",
     "lint:fix": "eslint \"./**/*.{ts,tsx,js,jsx}\" --fix"
   },
   "dependencies": {
