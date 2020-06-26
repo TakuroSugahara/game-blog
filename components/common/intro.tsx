@@ -1,5 +1,3 @@
-import {CMS_NAME, CMS_URL} from '../lib/constants';
-
 export default function Intro() {
   return (
     <section className="flex-col flex md:justify-between mb-16 md:mb-12">
@@ -13,5 +11,5 @@ export default function Intro() {
         </h4>
       </div>
     </section>
-  );
+  )
 }

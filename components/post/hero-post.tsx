@@ -1,23 +1,12 @@
-import Link from 'next/link';
-import Avatar from '../components/avatar';
-import Date from '../components/date';
+import Link from 'next/link'
 
-export default function HeroPost({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}) {
+export default function HeroPost({ title, coverImage, slug }) {
   return (
     <div className="max-w-sm overflow-hidden mb-10 rounded">
       <img src={coverImage.url} alt={title} className="rounded-lg" />
       <div className="pt-4">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="text-primary hover:underline font-bold text-lg">
-            {title}
-          </a>
+          <a className="text-primary hover:underline font-bold text-lg">{title}</a>
         </Link>
       </div>
       <div className="py-4 text-center">
@@ -26,5 +15,5 @@ export default function HeroPost({
         </button>
       </div>
     </div>
-  );
+  )
 }

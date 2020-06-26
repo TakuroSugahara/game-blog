@@ -1,15 +1,6 @@
-import Link from 'next/link';
-import Avatar from '../components/avatar';
-import Date from '../components/date';
+import Link from 'next/link'
 
-export default function PostPreview({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}) {
+export default function PostPreview({ title, coverImage, slug }) {
   return (
     <div className="max-w-sm overflow-hidden mb-4 rounded">
       <img src={coverImage.url} alt={title} className="rounded-lg" />
@@ -24,5 +15,5 @@ export default function PostPreview({
         </button>
       </div>
     </div>
-  );
+  )
 }

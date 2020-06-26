@@ -1,8 +1,6 @@
-import Avatar from '../components/avatar';
-import Date from '../components/date';
-import PostTitle from '../components/post-title';
+import PostTitle from './post-title'
 
-export default function PostHeader({title, coverImage, date, author}) {
+export default function PostHeader({ title, coverImage }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -10,5 +8,5 @@ export default function PostHeader({title, coverImage, date, author}) {
         <img src={coverImage.url} alt={title} className="rounded-lg" />
       </div>
     </>
-  );
+  )
 }
