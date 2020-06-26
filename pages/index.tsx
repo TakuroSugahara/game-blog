@@ -3,29 +3,26 @@ import Head from 'next/head'
 import Layout from '../components/common/layout'
 import Container from '../components/common/container'
 import Intro from '../components/common/intro'
-import HeroPost from '../components/post/hero-post'
 import MoreStories from '../components/post/more-stories'
+import PostCard from '../components/post/post-card'
 import { CMS_NAME } from '../lib/constants'
 
-export default function Index({ preview, allPosts }) {
-  const heroPost = allPosts[0]
+export default function Index({ allPosts }) {
+  const firstPost = allPosts[0]
   const morePosts = allPosts.slice(1)
   return (
     <>
-      <Layout preview={preview}>
+      <Layout>
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
+        <Intro />
         <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+          {firstPost && (
+            <PostCard
+              title={firstPost.title}
+              coverImage={firstPost.coverImage}
+              slug={firstPost.slug}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -35,9 +32,9 @@ export default function Index({ preview, allPosts }) {
   )
 }
 
-export async function getStaticProps({ preview = false }) {
-  const allPosts = await getAllPostsForHome(preview)
+export async function getStaticProps() {
+  const allPosts = await getAllPostsForHome(false)
   return {
-    props: { preview, allPosts },
+    props: { allPosts },
   }
 }
