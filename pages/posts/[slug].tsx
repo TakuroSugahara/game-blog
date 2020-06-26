@@ -10,6 +10,7 @@ import PostHeader from '../../components/post/post-header'
 import PostBody from '../../components/post/post-body'
 import SectionSeparator from '../../components/section-separator'
 import MoreStories from '../../components/post/more-stories'
+import { CMS_NAME } from '../../lib/constants'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -21,7 +22,6 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
