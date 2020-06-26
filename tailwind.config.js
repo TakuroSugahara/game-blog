@@ -2,11 +2,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent-1': '#FAFAFA',
+        accent: '#d9493c',
         'accent-2': '#EAEAEA',
         'accent-7': '#333',
+        primary: '#3c3c3c',
         success: '#0070f3',
         cyan: '#79FFE1',
+      },
+      fontFamily: {
+        body: '"Noto Sans"',
       },
       spacing: {
         28: '7rem',
@@ -29,4 +33,4 @@ module.exports = {
       },
     },
   },
-}
+};
