@@ -3,3 +3,8 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+body {
+  @apply text-primary;
+  letter-spacing: 2px;
+}

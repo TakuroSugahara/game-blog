@@ -10,13 +10,21 @@ module.exports = {
         cyan: '#79FFE1',
       },
       fontFamily: {
-        body: '"Noto Sans"',
+        body: [
+          '"Roboto Condensed"',
+          'sans-serif',
+          'system-ui',
+          '-apple-system',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ],
       },
       spacing: {
         28: '7rem',
       },
       letterSpacing: {
         tighter: '-.04em',
+        normal: '0.5em',
       },
       lineHeight: {
         tight: 1.2,
