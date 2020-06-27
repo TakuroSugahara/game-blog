@@ -1,6 +1,12 @@
 import PostTitle from './post-title'
+import * as React from 'react'
 
-export default function PostHeader({ title, coverImage }) {
+type PostHeaderType = {
+  title: string
+  coverImage: { url: string }
+}
+
+const PostHeader: React.FC<PostHeaderType> = ({ title, coverImage }) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -10,3 +16,5 @@ export default function PostHeader({ title, coverImage }) {
     </>
   )
 }
+
+export default PostHeader

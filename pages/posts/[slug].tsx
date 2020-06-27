@@ -45,12 +45,7 @@ export default function Post({ post, morePosts, preview }) {
                 <meta property="twitter:url" content={'localhost:3000' + router.asPath} />
                 <meta property="twitter:image" content={'http:' + post.coverImage.url} />
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
+              <PostHeader title={post.title} coverImage={post.coverImage} />
               <PostBody content={post.content} />
             </article>
             <SectionSeparator />
